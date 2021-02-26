@@ -30,8 +30,10 @@
     </div>
     // list rendering v-for
     <div class="render">
+      // add content vao tasks
       <input type="text" v-model="newTask">
       <button @click="tasks.push({content: newTask, done: false})">add</button>
+      // render len componet qua v-for 
       <div v-for="(task, index) in tasks" v-bind:key="index" class="list" >
           <input type="checkbox" v-model="task.done">
           <span v-bind:class="{done: task.done}"> {{task.content}}</span>
